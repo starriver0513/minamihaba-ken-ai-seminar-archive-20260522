@@ -1,0 +1,1705 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>南幅ケンさん AI講師セミナー アーカイブ | AIマーケティング構築講座</title>
+  <meta name="description" content="AIマーケティング構築講座生限定、南幅ケンさん特別講師セミナーのアーカイブページ。AIインフラ、本編要約、Q&A、アウトプット導線を掲載。">
+</head>
+<body style="margin:0;">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=M+PLUS+1:wght@400;500;700;800&display=swap');
+  :root {
+    --mk-ink: #111827;
+    --mk-muted: #5f6878;
+    --mk-soft: #f6f7fb;
+    --mk-paper: #ffffff;
+    --mk-line: rgba(17, 24, 39, 0.12);
+    --mk-navy: #182033;
+    --mk-indigo: #4f46e5;
+    --mk-violet: #7c3aed;
+    --mk-cyan: #0891b2;
+    --mk-emerald: #0f766e;
+    --mk-rose: #e11d48;
+    --mk-gold: #b7791f;
+    --mk-shadow: 0 24px 80px rgba(20, 26, 43, 0.16);
+  }
+  .mk-archive {
+    color: var(--mk-ink);
+    background:
+      linear-gradient(180deg, #f7f8fc 0%, #ffffff 24%, #f2f7f8 52%, #fff8fb 78%, #ffffff 100%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic', 'YuGothic', 'Segoe UI', sans-serif;
+    line-height: 1.78;
+    margin: 0;
+    overflow: hidden;
+  }
+  .mk-archive * {
+    box-sizing: border-box;
+  }
+  .mk-archive a {
+    color: inherit;
+  }
+  .mk-shell {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+  }
+  .mk-hero {
+    position: relative;
+    color: #ffffff;
+    background:
+      linear-gradient(135deg, rgba(24, 32, 51, 0.98), rgba(54, 42, 102, 0.96) 46%, rgba(13, 111, 116, 0.94));
+    isolation: isolate;
+  }
+  .mk-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    background-size: 56px 56px;
+    opacity: 0.34;
+    z-index: -1;
+  }
+  .mk-hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 96px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0), #f7f8fc 92%);
+    z-index: -1;
+  }
+  .mk-hero-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.12fr) minmax(300px, 0.88fr);
+    gap: 42px;
+    align-items: center;
+    padding: 74px 0 96px;
+  }
+  .mk-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 20px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .mk-breadcrumb span {
+    display: inline-flex;
+    min-height: 28px;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    padding: 3px 10px;
+    background: rgba(255, 255, 255, 0.08);
+  }
+  .mk-hero h1 {
+    margin: 0;
+    max-width: 760px;
+    font-size: clamp(34px, 6vw, 68px);
+    line-height: 1.08;
+    letter-spacing: 0;
+  }
+  .mk-hero-lead {
+    margin: 22px 0 0;
+    max-width: 720px;
+    color: rgba(255, 255, 255, 0.84);
+    font-size: clamp(16px, 2vw, 19px);
+  }
+  .mk-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+  }
+  .mk-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 11px 18px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background: #ffffff;
+    color: #172033 !important;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 14px;
+  }
+  .mk-button-primary {
+    background: linear-gradient(135deg, #ffffff, #eef7ff);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
+  }
+  .mk-button-ghost {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.10);
+    border-color: rgba(255, 255, 255, 0.26);
+  }
+  .mk-hero-panel {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.10);
+    box-shadow: 0 26px 80px rgba(0, 0, 0, 0.22);
+    padding: 20px;
+    backdrop-filter: blur(18px);
+  }
+  .mk-hero-panel h2 {
+    margin: 0 0 12px;
+    font-size: 17px;
+    letter-spacing: 0;
+  }
+  .mk-hero-list {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .mk-hero-list li {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 10px;
+    align-items: start;
+    padding: 12px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 14px;
+  }
+  .mk-hero-list strong {
+    color: #ffffff;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  .mk-alert {
+    margin-top: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 8px;
+    padding: 13px 14px;
+    background: rgba(255, 255, 255, 0.09);
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 13px;
+  }
+  .mk-section {
+    padding: 72px 0;
+  }
+  .mk-section-tight {
+    padding: 46px 0;
+  }
+  .mk-section-head {
+    max-width: 820px;
+    margin: 0 0 28px;
+  }
+  .mk-section-head .mk-kicker {
+    margin: 0 0 8px;
+    color: var(--mk-emerald);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .mk-section-head h2 {
+    margin: 0;
+    color: var(--mk-ink);
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.18;
+    letter-spacing: 0;
+  }
+  .mk-section-head p:last-child {
+    margin: 14px 0 0;
+    color: var(--mk-muted);
+    font-size: 15px;
+  }
+  .mk-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .mk-metric {
+    min-height: 146px;
+    border: 1px solid var(--mk-line);
+    border-radius: 8px;
+    background: var(--mk-paper);
+    padding: 18px;
+    box-shadow: 0 18px 50px rgba(24, 32, 51, 0.08);
+  }
+  .mk-metric span {
+    display: block;
+    color: var(--mk-cyan);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+  }
+  .mk-metric strong {
+    display: block;
+    margin-top: 8px;
+    color: var(--mk-navy);
+    font-size: 30px;
+    line-height: 1.05;
+    letter-spacing: 0;
+  }
+  .mk-metric p {
+    margin: 10px 0 0;
+    color: var(--mk-muted);
+    font-size: 13px;
+  }
+  .mk-video-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+    gap: 18px;
+    align-items: stretch;
+  }
+  .mk-video-card {
+    overflow: hidden;
+    border: 1px solid var(--mk-line);
+    border-radius: 8px;
+    background: var(--mk-paper);
+    box-shadow: var(--mk-shadow);
+  }
+  .mk-video-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #111827;
+  }
+  .mk-video-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  .mk-video-frame-pending {
+    display: grid;
+    place-items: center;
+    background:
+      linear-gradient(135deg, rgba(17, 24, 39, 0.96), rgba(49, 46, 129, 0.88)),
+      repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 18px);
+  }
+  .mk-video-pending-copy {
+    width: min(520px, calc(100% - 40px));
+    color: #ffffff;
+    text-align: center;
+  }
+  .mk-video-pending-copy span {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #8dd6f6;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .mk-video-pending-copy strong {
+    display: block;
+    font-size: clamp(24px, 4vw, 38px);
+    line-height: 1.18;
+  }
+  .mk-video-pending-copy p {
+    margin: 12px 0 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 14px;
+  }
+  .mk-video-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-top: 1px solid var(--mk-line);
+    color: var(--mk-muted);
+    font-size: 13px;
+  }
+  .mk-video-actions a {
+    color: var(--mk-indigo);
+    font-weight: 800;
+    text-decoration: none;
+  }
+  .mk-status {
+    display: inline-flex;
+    min-height: 28px;
+    align-items: center;
+    border-radius: 999px;
+    padding: 3px 10px;
+    font-weight: 900;
+    font-size: 12px;
+  }
+  .mk-status-ok {
+    background: #e6f8f3;
+    color: #0f766e;
+  }
+  .mk-status-wait {
+    background: #fff4df;
+    color: #9a5b00;
+  }
+  .mk-watch-card {
+    border: 1px solid var(--mk-line);
+    border-radius: 8px;
+    background: #101827;
+    color: #ffffff;
+    padding: 22px;
+    box-shadow: 0 18px 50px rgba(17, 24, 39, 0.20);
+  }
+  .mk-watch-card h3 {
+    margin: 0;
+    font-size: 20px;
+  }
+  .mk-watch-card p {
+    margin: 10px 0 0;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 14px;
+  }
+  .mk-watch-list {
+    display: grid;
+    gap: 10px;
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .mk-watch-list li {
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    padding-top: 10px;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 13px;
+  }
+  .mk-profile-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: 18px;
+    align-items: stretch;
+  }
+  .mk-profile-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background:
+      linear-gradient(145deg, rgba(24, 32, 51, 0.98), rgba(79, 70, 229, 0.90) 58%, rgba(8, 145, 178, 0.86));
+    color: #ffffff;
+    padding: 28px;
+    box-shadow: var(--mk-shadow);
+  }
+  .mk-profile-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.10) 1px, transparent 1px);
+    background-size: 46px 46px;
+    opacity: 0.24;
+  }
+  .mk-profile-card > * {
+    position: relative;
+  }
+  .mk-profile-card span {
+    display: inline-flex;
+    margin-bottom: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 999px;
+    padding: 4px 11px;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 12px;
+    font-weight: 900;
+  }
+  .mk-profile-card h2 {
+    margin: 0;
+    font-size: clamp(30px, 5vw, 54px);
+    line-height: 1.1;
+    letter-spacing: 0;
+  }
+  .mk-profile-card p {
+    margin: 16px 0 0;
+    color: rgba(255, 255, 255, 0.82);
+  }
+  .mk-note-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .mk-note-card {
+    border: 1px solid var(--mk-line);
+    border-radius: 8px;
+    background: var(--mk-paper);
+    padding: 18px;
+    box-shadow: 0 14px 38px rgba(24, 32, 51, 0.07);
+  }
+  .mk-note-card .mk-card-meta {
+    margin: 0 0 8px;
+    color: var(--mk-rose);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+  }
+  .mk-note-card h3 {
+    margin: 0;
+    color: var(--mk-navy);
+    font-size: 18px;
+    line-height: 1.35;
+    letter-spacing: 0;
+  }
+  .mk-note-card p {
+    margin: 10px 0 0;
+    color: var(--mk-muted);
+    font-size: 14px;
+  }
+  .mk-timeline {
+    display: grid;
+    gap: 14px;
+  }
+  .mk-timeline-item {
+    display: grid;
+    grid-template-columns: 118px 1fr;
+    gap: 18px;
+    align-items: start;
+    border: 1px solid var(--mk-line);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.86);
+    padding: 18px;
+    box-shadow: 0 14px 36px rgba(24, 32, 51, 0.06);
+  }
+  .mk-time-badge {
+    position: sticky;
+    top: 18px;
+  }
+  .mk-time-badge span {
+    display: inline-flex;
+    width: 100%;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #eef6ff;
+    color: #2255a4;
+    font-weight: 900;
+    font-size: 13px;
+  }
+  .mk-timeline-copy h3 {
+    margin: 0;
+    color: var(--mk-navy);
+    font-size: 20px;
+    line-height: 1.35;
+    letter-spacing: 0;
+  }
+  .mk-timeline-copy p {
+    margin: 8px 0 0;
+    color: var(--mk-muted);
+    font-size: 14px;
+  }
+  .mk-timeline-copy ul {
+    display: grid;
+    gap: 7px;
+    margin: 12px 0 0;
+    padding-left: 1.1em;
+    color: #3d4657;
+    font-size: 14px;
+  }
+  .mk-dark-band {
+    color: #ffffff;
+    background:
+      linear-gradient(135deg, #141b2d, #271f4d 48%, #083f49);
+    position: relative;
+    isolation: isolate;
+  }
+  .mk-dark-band::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 58px 58px;
+    opacity: 0.26;
+    z-index: -1;
+  }
+  .mk-dark-band .mk-section-head h2,
+  .mk-dark-band .mk-section-head p {
+    color: #ffffff;
+  }
+  .mk-dark-band .mk-section-head p:last-child {
+    color: rgba(255, 255, 255, 0.76);
+  }
+  .mk-step-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .mk-step-card {
+    min-height: 210px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.09);
+    padding: 18px;
+  }
+  .mk-step-num {
+    display: inline-flex;
+    min-width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #182033;
+    font-weight: 900;
+  }
+  .mk-step-card h3 {
+    margin: 18px 0 0;
+    font-size: 18px;
+    line-height: 1.35;
+    letter-spacing: 0;
+  }
+  .mk-step-card p {
+    margin: 10px 0 0;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 14px;
+  }
+  .mk-comparison {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .mk-compare-card {
+    border: 1px solid var(--mk-line);
+    border-radius: 8px;
+    background: var(--mk-paper);
+    padding: 22px;
+    box-shadow: 0 14px 38px rgba(24, 32, 51, 0.07);
+  }
+  .mk-compare-card h3 {
+    margin: 0;
+    font-size: 21px;
+    line-height: 1.35;
+    letter-spacing: 0;
+  }
+  .mk-compare-card p {
+    margin: 10px 0 0;
+    color: var(--mk-muted);
+  }
+  .mk-compare-card ul {
+    display: grid;
+    gap: 8px;
+    margin: 16px 0 0;
+    padding-left: 1.1em;
+    color: #3d4657;
+  }
+  .mk-compare-ng {
+    border-top: 5px solid var(--mk-rose);
+  }
+  .mk-compare-ok {
+    border-top: 5px solid var(--mk-emerald);
+  }
+  .mk-pillar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .mk-pillar {
+    border: 1px solid var(--mk-line);
+    border-radius: 8px;
+    background: var(--mk-paper);
+    padding: 20px;
+    box-shadow: 0 14px 38px rgba(24, 32, 51, 0.07);
+  }
+  .mk-pillar span {
+    display: inline-flex;
+    margin-bottom: 12px;
+    border-radius: 999px;
+    padding: 3px 10px;
+    background: #eef6ff;
+    color: #2255a4;
+    font-size: 12px;
+    font-weight: 900;
+  }
+  .mk-pillar h3 {
+    margin: 0;
+    font-size: 19px;
+    line-height: 1.35;
+    letter-spacing: 0;
+  }
+  .mk-pillar p {
+    margin: 10px 0 0;
+    color: var(--mk-muted);
+    font-size: 14px;
+  }
+  .mk-qa-grid {
+    display: grid;
+    gap: 12px;
+  }
+  .mk-qa-card {
+    display: grid;
+    grid-template-columns: 62px 1fr;
+    gap: 16px;
+    border: 1px solid var(--mk-line);
+    border-radius: 8px;
+    background: var(--mk-paper);
+    padding: 18px;
+    box-shadow: 0 14px 38px rgba(24, 32, 51, 0.07);
+  }
+  .mk-qa-index span {
+    display: inline-flex;
+    width: 46px;
+    height: 46px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #192033;
+    color: #ffffff;
+    font-weight: 900;
+  }
+  .mk-qa-body .mk-qa-focus {
+    margin: 0 0 6px;
+    color: var(--mk-rose);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+  }
+  .mk-qa-body h3 {
+    margin: 0;
+    color: var(--mk-navy);
+    font-size: 19px;
+    line-height: 1.42;
+    letter-spacing: 0;
+  }
+  .mk-qa-body p:last-child {
+    margin: 10px 0 0;
+    color: var(--mk-muted);
+    font-size: 14px;
+  }
+  .mk-voice-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .mk-work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .mk-work-card {
+    border: 1px solid var(--mk-line);
+    border-radius: 8px;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 14px 38px rgba(24, 32, 51, 0.07);
+  }
+  .mk-work-label {
+    display: inline-flex;
+    min-height: 28px;
+    align-items: center;
+    border-radius: 999px;
+    padding: 3px 10px;
+    background: #f1ecff;
+    color: #5b21b6;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+  }
+  .mk-work-card h3 {
+    margin: 12px 0 0;
+    color: var(--mk-navy);
+    font-size: 20px;
+    line-height: 1.35;
+    letter-spacing: 0;
+  }
+  .mk-work-card p {
+    margin: 10px 0 0;
+    color: var(--mk-muted);
+    font-size: 14px;
+  }
+  .mk-work-card ul {
+    display: grid;
+    gap: 7px;
+    margin: 14px 0 0;
+    padding-left: 1.1em;
+    color: #3d4657;
+    font-size: 14px;
+  }
+  .mk-review-strip {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 18px;
+  }
+  .mk-review-chip {
+    border: 1px solid var(--mk-line);
+    border-radius: 8px;
+    background: #f8fafc;
+    padding: 14px;
+    color: #344054;
+    font-size: 13px;
+    font-weight: 800;
+  }
+  .mk-voice {
+    border: 1px solid var(--mk-line);
+    border-radius: 8px;
+    background: #ffffff;
+    padding: 18px;
+    box-shadow: 0 14px 38px rgba(24, 32, 51, 0.07);
+  }
+  .mk-voice p {
+    margin: 0;
+    color: #344054;
+    font-size: 14px;
+  }
+  .mk-voice span {
+    display: block;
+    margin-top: 12px;
+    color: var(--mk-muted);
+    font-size: 12px;
+    font-weight: 800;
+  }
+  .mk-cta {
+    overflow: hidden;
+    border-radius: 8px;
+    background:
+      linear-gradient(135deg, #111827, #4338ca 46%, #0f766e);
+    color: #ffffff;
+    padding: 30px;
+    box-shadow: var(--mk-shadow);
+  }
+  .mk-cta h2 {
+    margin: 0;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.18;
+    letter-spacing: 0;
+  }
+  .mk-cta p {
+    margin: 14px 0 0;
+    max-width: 820px;
+    color: rgba(255, 255, 255, 0.80);
+  }
+  .mk-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 22px;
+  }
+  .mk-source-note {
+    margin-top: 22px;
+    color: var(--mk-muted);
+    font-size: 12px;
+  }
+  .mk-footer {
+    border-top: 1px solid var(--mk-line);
+    padding: 26px 0 42px;
+    color: var(--mk-muted);
+    font-size: 12px;
+  }
+  @media (max-width: 920px) {
+    .mk-hero-inner,
+    .mk-video-grid,
+    .mk-profile-grid {
+      grid-template-columns: 1fr;
+    }
+    .mk-metrics,
+    .mk-step-grid,
+    .mk-pillar-grid,
+    .mk-review-strip,
+    .mk-voice-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 640px) {
+    .mk-shell {
+      width: min(100% - 24px, 1120px);
+    }
+    .mk-hero-inner {
+      padding: 48px 0 72px;
+      gap: 26px;
+    }
+    .mk-hero-list li {
+      grid-template-columns: 1fr;
+    }
+    .mk-section {
+      padding: 52px 0;
+    }
+    .mk-metrics,
+    .mk-note-grid,
+    .mk-step-grid,
+    .mk-comparison,
+    .mk-pillar-grid,
+    .mk-work-grid,
+    .mk-review-strip,
+    .mk-voice-grid {
+      grid-template-columns: 1fr;
+    }
+    .mk-timeline-item {
+      grid-template-columns: 1fr;
+    }
+    .mk-time-badge {
+      position: static;
+    }
+    .mk-qa-card {
+      grid-template-columns: 1fr;
+    }
+    .mk-cta {
+      padding: 22px;
+    }
+  }
+
+  /* /utage-html THE DIRECTORY theme override */
+  .mk-archive {
+    --mk-ink: #20112f;
+    --mk-muted: #5d5570;
+    --mk-soft: #f8f6ff;
+    --mk-paper: rgba(255, 255, 255, 0.94);
+    --mk-line: rgba(124, 58, 237, 0.15);
+    --mk-navy: #1a0a2e;
+    --mk-indigo: #7c3aed;
+    --mk-violet: #a78bfa;
+    --mk-cyan: #22d3ee;
+    --mk-emerald: #7c3aed;
+    --mk-rose: #e91e9a;
+    --mk-gold: #ffb84d;
+    --mk-accent: #e91e9a;
+    --mk-accent-light: #ff6ec7;
+    --mk-deep: #4c1d95;
+    --mk-gradient-main: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 48%, #4c1d95 100%);
+    --mk-gradient-accent: linear-gradient(135deg, #e91e9a 0%, #7c3aed 100%);
+    --mk-gradient-soft: linear-gradient(135deg, rgba(124, 58, 237, 0.09) 0%, rgba(233, 30, 154, 0.09) 100%);
+    --mk-shadow: 0 4px 20px rgba(124, 58, 237, 0.15);
+    --mk-shadow-hover: 0 12px 40px rgba(124, 58, 237, 0.28);
+    color: var(--mk-ink);
+    background:
+      radial-gradient(circle at 14% 0%, rgba(233, 30, 154, 0.13) 0%, transparent 28%),
+      radial-gradient(circle at 88% 16%, rgba(34, 211, 238, 0.12) 0%, transparent 30%),
+      linear-gradient(180deg, #f8f6ff 0%, #ffffff 28%, #fbf7ff 58%, #fff5fb 100%);
+    font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic', 'YuGothic', sans-serif;
+    line-height: 1.9;
+  }
+  .mk-archive h1,
+  .mk-archive h2,
+  .mk-archive h3 {
+    font-family: 'M PLUS 1', 'Noto Sans JP', sans-serif;
+    font-weight: 900;
+  }
+  @keyframes mkFloatGlow {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.58; }
+    50% { transform: translate(20px, -14px) scale(1.08); opacity: 0.88; }
+  }
+  @keyframes mkSlowRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  @keyframes mkBadgeBlink {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(233, 30, 154, 0.45); }
+    50% { box-shadow: 0 0 0 10px rgba(233, 30, 154, 0); }
+  }
+  @keyframes mkPulseGlow {
+    0%, 100% { box-shadow: 0 4px 20px rgba(233, 30, 154, 0.40); }
+    50% { box-shadow: 0 8px 42px rgba(124, 58, 237, 0.62), 0 0 22px rgba(233, 30, 154, 0.34); }
+  }
+  @keyframes mkShimmer {
+    0% { transform: translateX(-120%); }
+    100% { transform: translateX(120%); }
+  }
+  @keyframes mkSoftPop {
+    0% { opacity: 0; transform: translateY(12px) scale(0.985); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .mk-shell {
+    width: min(1040px, calc(100% - 32px));
+  }
+  .mk-hero {
+    overflow: hidden;
+    background: var(--mk-gradient-main);
+    box-shadow: 0 22px 70px rgba(26, 10, 46, 0.28);
+  }
+  .mk-hero::before {
+    inset: -35%;
+    background: url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 0 L72 36 L36 72 L0 36 Z' fill='none' stroke='rgba(255,255,255,0.055)' stroke-width='1'/%3E%3C/svg%3E");
+    background-size: 72px 72px;
+    opacity: 1;
+    animation: mkSlowRotate 150s linear infinite;
+  }
+  .mk-hero::after {
+    top: -120px;
+    right: -90px;
+    left: auto;
+    bottom: auto;
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(233, 30, 154, 0.38) 0%, transparent 70%);
+    animation: mkFloatGlow 8s ease-in-out infinite;
+  }
+  .mk-hero-inner {
+    padding: 64px 0 86px;
+  }
+  .mk-breadcrumb span,
+  .mk-status,
+  .mk-work-label,
+  .mk-pillar span,
+  .mk-profile-card span {
+    border-radius: 999px;
+  }
+  .mk-breadcrumb span {
+    background: var(--mk-gradient-accent);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    animation: mkBadgeBlink 2.6s ease-in-out infinite;
+  }
+  .mk-hero h1 {
+    font-size: clamp(32px, 6vw, 62px);
+    line-height: 1.14;
+    text-shadow: 0 14px 42px rgba(0, 0, 0, 0.24);
+  }
+  .mk-hero-lead {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: clamp(16px, 2vw, 18px);
+  }
+  .mk-button {
+    position: relative;
+    overflow: hidden;
+    min-height: 50px;
+    border-radius: 16px;
+    padding: 12px 22px;
+    font-weight: 900;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+  }
+  .mk-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.30), transparent);
+    transform: translateX(-120%);
+    animation: mkShimmer 3.2s ease-in-out infinite;
+  }
+  .mk-button:hover {
+    transform: translateY(-4px) scale(1.025);
+  }
+  .mk-button-primary {
+    background: var(--mk-gradient-accent);
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.16);
+    box-shadow: 0 4px 20px rgba(233, 30, 154, 0.40);
+    animation: mkPulseGlow 2.7s ease-in-out infinite;
+  }
+  .mk-button-ghost {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.24);
+    color: #ffffff !important;
+  }
+  .mk-hero-panel,
+  .mk-video-card,
+  .mk-profile-card,
+  .mk-note-card,
+  .mk-timeline-item,
+  .mk-compare-card,
+  .mk-pillar,
+  .mk-qa-card,
+  .mk-work-card,
+  .mk-voice,
+  .mk-metric {
+    border-radius: 20px;
+    border-color: var(--mk-line);
+    background: var(--mk-paper);
+    box-shadow: var(--mk-shadow);
+    animation: mkSoftPop 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  }
+  .mk-hero-panel {
+    background: rgba(255, 255, 255, 0.11);
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.24), 0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+  }
+  .mk-video-card:hover,
+  .mk-note-card:hover,
+  .mk-timeline-item:hover,
+  .mk-compare-card:hover,
+  .mk-pillar:hover,
+  .mk-qa-card:hover,
+  .mk-work-card:hover,
+  .mk-voice:hover,
+  .mk-metric:hover {
+    transform: translateY(-3px);
+    border-color: rgba(233, 30, 154, 0.24);
+    box-shadow: var(--mk-shadow-hover);
+  }
+  .mk-section-head .mk-kicker,
+  .mk-metric span,
+  .mk-note-card .mk-card-meta,
+  .mk-qa-body .mk-qa-focus {
+    color: var(--mk-accent);
+  }
+  .mk-section-head h2 {
+    color: var(--mk-navy);
+  }
+  .mk-video-frame,
+  .mk-watch-card {
+    background:
+      linear-gradient(135deg, rgba(26, 10, 46, 0.98), rgba(45, 27, 78, 0.96) 52%, rgba(76, 29, 149, 0.92)),
+      radial-gradient(circle at 78% 18%, rgba(233, 30, 154, 0.32), transparent 32%);
+  }
+  .mk-video-actions {
+    background: rgba(255, 255, 255, 0.96);
+  }
+  .mk-status-ok {
+    background: linear-gradient(135deg, rgba(34, 211, 238, 0.16), rgba(167, 139, 250, 0.20));
+    color: #4c1d95;
+  }
+  .mk-profile-card,
+  .mk-dark-band,
+  .mk-cta {
+    background: var(--mk-gradient-main);
+    box-shadow: 0 22px 70px rgba(26, 10, 46, 0.24);
+  }
+  .mk-profile-card::before,
+  .mk-dark-band::before {
+    background: url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 0 L72 36 L36 72 L0 36 Z' fill='none' stroke='rgba(255,255,255,0.060)' stroke-width='1'/%3E%3C/svg%3E");
+    opacity: 0.62;
+  }
+  .mk-step-card {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.10);
+    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 12px 36px rgba(26, 10, 46, 0.18);
+  }
+  .mk-step-num,
+  .mk-time-badge span,
+  .mk-qa-index span {
+    border-radius: 14px;
+    background: var(--mk-gradient-accent);
+    color: #ffffff;
+    box-shadow: 0 10px 28px rgba(233, 30, 154, 0.24);
+  }
+  .mk-time-badge span,
+  .mk-pillar span,
+  .mk-work-label {
+    background: var(--mk-gradient-soft);
+    color: #5b21b6;
+  }
+  .mk-compare-ng {
+    border-top: 5px solid var(--mk-accent);
+  }
+  .mk-compare-ok {
+    border-top: 5px solid var(--mk-purple, #7c3aed);
+  }
+  .mk-alert {
+    border-radius: 16px;
+    border-color: rgba(255, 255, 255, 0.26);
+    background: rgba(255, 255, 255, 0.12);
+  }
+  .mk-cta {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+  .mk-cta::after {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -90px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(233, 30, 154, 0.36) 0%, transparent 70%);
+    animation: mkFloatGlow 8s ease-in-out infinite;
+    pointer-events: none;
+  }
+  .mk-source-note {
+    border-left: 4px solid rgba(233, 30, 154, 0.42);
+    padding-left: 12px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .mk-archive *,
+    .mk-archive *::before,
+    .mk-archive *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+
+</style>
+<div class="mk-archive">
+  <header class="mk-hero">
+    <div class="mk-shell mk-hero-inner">
+      <div>
+        <p class="mk-breadcrumb">
+          <span>AIマーケティング構築講座</span>
+          <span>特別講師セミナー</span>
+          <span>Archive 2026.05.22</span>
+        </p>
+        <h1>南幅ケンさん<br>AI講師セミナー<br>アーカイブ</h1>
+        <p class="mk-hero-lead">ローンチ現場の稼働を減らすための「AIインフラ」。制作物を速く作る話で止めず、合格ライン・一次情報・スタイル定義・チーム連携までを仕組みにするセミナーです。</p>
+        <div class="mk-hero-actions">
+          <a class="mk-button mk-button-primary" href="#archive-video">アーカイブ動画へ</a>
+          <a class="mk-button mk-button-ghost" href="#qa">Q&Aを見る</a>
+        </div>
+      </div>
+      <aside class="mk-hero-panel" aria-label="アーカイブ概要">
+        <h2>このページで確認できること</h2>
+        <ul class="mk-hero-list">
+          <li><strong>Main</strong><span>セミナー本編の流れと、AIインフラを作るための要点</span></li>
+          <li><strong>Profile</strong><span>南幅ケンさんの経歴・専門領域・現場実績の紹介</span></li>
+          <li><strong>Q&A</strong><span>時間棚卸し、コンセプト、LP合格ライン、コピーのキレなどの回答</span></li>
+          <li><strong>Action</strong><span>Xでのアウトプット投稿導線と復習時の見どころ</span></li>
+        </ul>
+        <p class="mk-alert">セミナー資料そのもの、スライド画像、Canvaデータの配布はありません。録画内容の理解を補助するアーカイブページです。</p>
+      </aside>
+    </div>
+  </header>
+  <main>
+    <section class="mk-section mk-section-tight">
+      <div class="mk-shell">
+        <div class="mk-metrics">
+<article class="mk-metric">
+  <span>開催日</span>
+  <strong>2026.05.22</strong>
+  <p>AIマーケティング構築講座生限定の特別講師セミナー</p>
+</article>
+<article class="mk-metric">
+  <span>録画時間</span>
+  <strong>2:32:24</strong>
+  <p>本編、質疑応答、アウトプット案内まで含むフルアーカイブ</p>
+</article>
+<article class="mk-metric">
+  <span>テーマ</span>
+  <strong>AIインフラ</strong>
+  <p>ローンチ全体の稼働を減らすための下ごしらえ</p>
+</article>
+<article class="mk-metric">
+  <span>資料配布</span>
+  <strong>なし</strong>
+  <p>このページではセミナー資料そのものは配布しません</p>
+</article>
+        </div>
+      </div>
+    </section>
+    <section class="mk-section" id="archive-video">
+      <div class="mk-shell">
+        <div class="mk-section-head">
+          <p class="mk-kicker">Archive Video</p>
+          <h2>まずは録画で、現場の温度感ごと確認する</h2>
+          <p>本編は、AIで個別の制作物を速くする話ではなく、次回以降のローンチも楽になる土台作りが主題です。Q&Aでは参加者の具体質問に合わせて、現場の判断軸まで踏み込んでいます。</p>
+        </div>
+        <div class="mk-video-grid">
+          <article class="mk-video-card">
+            <div class="mk-video-frame">
+              <iframe src="https://drive.google.com/file/d/1-8Ntu6lvjeT9dBfbA1cjkthzfsO3HcZs/preview" allow="autoplay; fullscreen" allowfullscreen title="南幅ケンさん AI講師セミナー アーカイブ動画"></iframe>
+            </div>
+            <div class="mk-video-actions">
+              <span class="mk-status mk-status-ok">Google Drive preview embedded</span>
+              <span>ページ内でプレビュー再生できます。資料ファイルの配布はありません。</span>
+            </div>
+          </article>
+          <aside class="mk-watch-card">
+            <h3>視聴前に持っておく問い</h3>
+            <p>ただノウハウを拾うより、いま自分の制作・運用にどのインフラが欠けているかを見ながら進めると、復習の密度が上がります。</p>
+            <ul class="mk-watch-list">
+              <li>LP・配信・台本の「合格ライン」は、作る前に言語化できているか。</li>
+              <li>受講生・見込み客の一次情報を、AIに渡せる形で持っているか。</li>
+              <li>自分らしい言葉・言わない言葉・立ち位置が、スタイルシート化されているか。</li>
+              <li>チームに依頼する時、背景情報と判断基準までセットで渡せているか。</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <section class="mk-section" id="profile">
+      <div class="mk-shell">
+        <div class="mk-profile-grid">
+          <article class="mk-profile-card">
+            <span>Guest Instructor</span>
+            <h2>南幅ケンさん</h2>
+            <p>Webビジネス歴約15年。出版、広告代理店、メディア運営、ECなど複数領域を経験し、特にLINE・メールを起点に商品販売と事業成長を作るリストマーケティングを専門とする実務家です。</p>
+          </article>
+          <div class="mk-note-grid">
+            <article class="mk-note-card">
+              <p class="mk-card-meta">Career</p>
+              <h3>複数事業を運営</h3>
+              <p>出版事業、広告代理店、メディア運営会社などを運営。各社はおおむね年商1億から5億規模の事業として紹介されました。</p>
+            </article>
+            <article class="mk-note-card">
+              <p class="mk-card-meta">Marketing</p>
+              <h3>リスト獲得と販売の現場</h3>
+              <p>月間広告運用額は過去に8,000万円から1.3億円規模。2万から3万人規模のリスト獲得を伴うプロモーションを扱ってきた実績があります。</p>
+            </article>
+            <article class="mk-note-card">
+              <p class="mk-card-meta">Launch</p>
+              <h3>オンライン事業の裏方</h3>
+              <p>年商1億から10億規模のオンライン事業を主に担当。現在は案件を絞り、大型プロジェクトを中心に活動されています。</p>
+            </article>
+            <article class="mk-note-card">
+              <p class="mk-card-meta">Story</p>
+              <h3>15歳からの実務人生</h3>
+              <p>15歳で高校を辞めて一人暮らしを始め、19歳で起業。23歳で母親へ家を贈ったという背景も、セミナー内で語られました。</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mk-section" id="main">
+      <div class="mk-shell">
+        <div class="mk-section-head">
+          <p class="mk-kicker">Main Seminar</p>
+          <h2>セミナー本編の流れ</h2>
+          <p>本編は「AIを使って制作物を早く作る」から一段上げて、ローンチの稼働を構造的に減らすための設計論として進みます。</p>
+        </div>
+        <div class="mk-timeline">
+          <article class="mk-timeline-item">
+            <div class="mk-time-badge">
+              <span>00:11</span>
+            </div>
+            <div class="mk-timeline-copy">
+              <h3>ローンチ全体の稼働を減らす話</h3>
+              <p>AI活用を単発の制作効率化で終わらせず、ローンチの全体負荷を下げる仕組みとして扱う前提が提示されました。</p>
+              <ul>
+                <li>制作物を一個ずつ早くするだけでは、毎回ゼロから作る構造は変わらない</li>
+                <li>品質を落とせない現場ほど、作る前の設計が重要になる</li>
+              </ul>
+            </div>
+          </article>
+          <article class="mk-timeline-item">
+            <div class="mk-time-badge">
+              <span>00:19</span>
+            </div>
+            <div class="mk-timeline-copy">
+              <h3>AIで速くなったのに楽にならない理由</h3>
+              <p>制作そのものは全体の一部で、確認、連携、修正、想定外対応、リソース調整が残るため、現場のしんどさは消えにくいという整理です。</p>
+              <ul>
+                <li>個別作業だけ速くなっても、やり直しが多いと全体は軽くならない</li>
+                <li>人とのやりとりやAIリテラシー差も、ローンチ負荷の大きな要因になる</li>
+              </ul>
+            </div>
+          </article>
+          <article class="mk-timeline-item">
+            <div class="mk-time-badge">
+              <span>00:30</span>
+            </div>
+            <div class="mk-timeline-copy">
+              <h3>合格ラインを先に決める</h3>
+              <p>「いい感じに作って」ではなく、何を達成したら合格かを先に定義し、必要要素を洗い出してから制作・評価・修正に進む流れが示されました。</p>
+              <ul>
+                <li>例: 登録率だけでなく、セミナー参加まで進む人を集めるコピーにする</li>
+                <li>Day2配信なら、離脱しかけた人を戻しDay3への興味を作るなど、役割を明確にする</li>
+              </ul>
+            </div>
+          </article>
+          <article class="mk-timeline-item">
+            <div class="mk-time-badge">
+              <span>00:45</span>
+            </div>
+            <div class="mk-timeline-copy">
+              <h3>一次情報をAIに渡す</h3>
+              <p>AIは何も渡さなければ平均的な悩みや表現に寄ります。本音ベースの顧客の言葉をできる限り用意し、対象者ごとの言葉の違いまで拾うことが重要です。</p>
+              <ul>
+                <li>同じ意味でも、対象者によって刺さる単語は変わる</li>
+                <li>AIに汎用的な悩みを出させるのではなく、実際の言葉を材料にする</li>
+              </ul>
+            </div>
+          </article>
+          <article class="mk-timeline-item">
+            <div class="mk-time-badge">
+              <span>00:55</span>
+            </div>
+            <div class="mk-timeline-copy">
+              <h3>パーソナル情報とスタイルシート</h3>
+              <p>話者の経歴、価値観、雑談、使う言葉、使わない言葉、下げ方、冗談、距離感を整理しておくことで、AI出力の違和感を減らすという話です。</p>
+              <ul>
+                <li>口調だけでは自分らしさは再現しきれない</li>
+                <li>立ち位置、関係性、言わない表現まで定義しておく</li>
+              </ul>
+            </div>
+          </article>
+          <article class="mk-timeline-item">
+            <div class="mk-time-badge">
+              <span>01:00</span>
+            </div>
+            <div class="mk-timeline-copy">
+              <h3>チームとAIの認識合わせ</h3>
+              <p>背景情報、目的、判断基準をセットで渡すことで、人にもAIにも依頼しやすくなり、修正の往復が減るという実務寄りの話が続きました。</p>
+              <ul>
+                <li>コアの制作物とスタイル定義があれば、枝葉の制作物は作りやすい</li>
+                <li>品質責任者が自分で作れる範囲が広がり、リソース損失が減る</li>
+              </ul>
+            </div>
+          </article>
+          <article class="mk-timeline-item">
+            <div class="mk-time-badge">
+              <span>01:40</span>
+            </div>
+            <div class="mk-timeline-copy">
+              <h3>時間の棚卸し</h3>
+              <p>GoogleカレンダーとAIを使い、自分の価値観に照らして時間の使い方を可視化した結果、約25%の無駄が見つかったという事例が紹介されました。</p>
+              <ul>
+                <li>人の時間で生きていないかを見る</li>
+                <li>会議や義務の量を可視化し、自分の時間を取り戻す</li>
+              </ul>
+            </div>
+          </article>
+          <article class="mk-timeline-item">
+            <div class="mk-time-badge">
+              <span>01:50</span>
+            </div>
+            <div class="mk-timeline-copy">
+              <h3>持ち帰りはAIインフラ</h3>
+              <p>一度下ごしらえを作ると二回目以降が劇的に楽になり、AIが賢くなっても本質的に役立つ仕組みとして残る、というまとめです。</p>
+              <ul>
+                <li>インサイト情報、パーソナル情報、スタイルシートが土台</li>
+                <li>単発のプロンプトではなく、再利用できる運用資産として作る</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="mk-section mk-dark-band" id="infra">
+      <div class="mk-shell">
+        <div class="mk-section-head">
+          <p class="mk-kicker">AI Infrastructure</p>
+          <h2>AIインフラを作る4ステップ</h2>
+          <p>ケンさんの話を、受講生が自分の事業に移し替えやすいように実行順へ整理しました。</p>
+        </div>
+        <div class="mk-step-grid">
+          <article class="mk-step-card">
+            <span class="mk-step-num">01</span>
+            <h3>合格ライン</h3>
+            <p>何を達成したら合格かを、登録率・参加率・購買後の状態変化まで含めて定義する。</p>
+          </article>
+          <article class="mk-step-card">
+            <span class="mk-step-num">02</span>
+            <h3>材料の洗い出し</h3>
+            <p>顧客の本音、過去の反応、話者の経歴、商品価値、NG表現を集めてAIへ渡せる形にする。</p>
+          </article>
+          <article class="mk-step-card">
+            <span class="mk-step-num">03</span>
+            <h3>作成と評価</h3>
+            <p>AIに作らせるだけで終わらず、合格ラインに対して足りない要素を評価させて修正する。</p>
+          </article>
+          <article class="mk-step-card">
+            <span class="mk-step-num">04</span>
+            <h3>再利用資産化</h3>
+            <p>一度作った判断基準、スタイル、構成、表現ルールを次回以降のローンチにも使える形で残す。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="mk-section">
+      <div class="mk-shell">
+        <div class="mk-section-head">
+          <p class="mk-kicker">Before / After</p>
+          <h2>AIに任せる前に、任せ方を設計する</h2>
+          <p>セミナー内で繰り返し出てきたのは、AIの出力精度はプロンプト単体ではなく、前提・材料・評価軸で決まるという見方です。</p>
+        </div>
+        <div class="mk-comparison">
+          <article class="mk-compare-card mk-compare-ng">
+            <h3>うまくいきにくい任せ方</h3>
+            <p>抽象的な依頼だけで作らせると、AIは平均的な答えを返しやすく、結局人間が大幅に書き直すことになります。</p>
+            <ul>
+              <li>「登録率が上がるコピーを書いて」だけで依頼する</li>
+              <li>ターゲットの現実の言葉を渡していない</li>
+              <li>話者の立ち位置やNG表現が定義されていない</li>
+              <li>出力後の評価基準が曖昧なままレビューする</li>
+            </ul>
+          </article>
+          <article class="mk-compare-card mk-compare-ok">
+            <h3>現場で使える任せ方</h3>
+            <p>合格ラインと材料を先に揃え、AIにも人にも同じ判断基準で作業させることで、修正の往復が減ります。</p>
+            <ul>
+              <li>登録後にセミナー参加まで進む人を集める、など目的を分解する</li>
+              <li>顧客の本音、質問、失敗談、成功談を材料にする</li>
+              <li>自分らしい表現と使わない表現をスタイル化する</li>
+              <li>出力を合格ラインに照らして評価し、足りない要素だけ修正する</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="mk-section">
+      <div class="mk-shell">
+        <div class="mk-section-head">
+          <p class="mk-kicker">Core Takeaways</p>
+          <h2>本編から押さえるべき6つの核</h2>
+          <p>復習時に見失いやすいポイントを、講座内で実装へ移しやすい単位に分解しています。</p>
+        </div>
+        <div class="mk-pillar-grid">
+          <article class="mk-pillar">
+            <span>01</span>
+            <h3>制作時間だけを見ない</h3>
+            <p>制作物そのものは全体の一部。修正、連携、確認、想定外対応まで含めて削る視点を持つ。</p>
+          </article>
+          <article class="mk-pillar">
+            <span>02</span>
+            <h3>ゴールを行動まで定義する</h3>
+            <p>登録、視聴、参加、購買、継続など、次に起こしたい行動まで合格ラインに含める。</p>
+          </article>
+          <article class="mk-pillar">
+            <span>03</span>
+            <h3>本音の言葉を集める</h3>
+            <p>AIに一般論を出させるのではなく、実際の顧客発話や質問を材料として渡す。</p>
+          </article>
+          <article class="mk-pillar">
+            <span>04</span>
+            <h3>話者の背景を整える</h3>
+            <p>経歴、価値観、冗談、弱みの見せ方、距離感を整理し、出力の違和感を減らす。</p>
+          </article>
+          <article class="mk-pillar">
+            <span>05</span>
+            <h3>スタイルシートを育てる</h3>
+            <p>使う言葉だけでなく、使わない言葉、強く言うライン、煽らないラインも残す。</p>
+          </article>
+          <article class="mk-pillar">
+            <span>06</span>
+            <h3>時間の使い方もAIで見る</h3>
+            <p>カレンダーや行動履歴をAIに見せ、自分の価値観に対して時間がズレていないか棚卸しする。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="mk-section" id="workshop">
+      <div class="mk-shell">
+        <div class="mk-section-head">
+          <p class="mk-kicker">Implementation Work</p>
+          <h2>視聴後に作るAIインフラ設計ワーク</h2>
+          <p>セミナーの学びを、自分のローンチ・LP・配信・台本制作に移すための作業メモです。録画を見ながら、この順番で手元の素材を整えてください。</p>
+        </div>
+        <div class="mk-work-grid">
+          <article class="mk-work-card">
+            <span class="mk-work-label">WORK 01</span>
+            <h3>今回の制作物の役割を1行で決める</h3>
+            <p>LP、配信、動画台本、投稿、セミナー資料など、作るものごとに役割を先に決めます。</p>
+            <ul>
+              <li>何を見た人に向けたものか</li>
+              <li>読了後・視聴後に何をしてほしいか</li>
+              <li>登録率だけでなく、その後の参加・購買・継続まで見るか</li>
+            </ul>
+          </article>
+          <article class="mk-work-card">
+            <span class="mk-work-label">WORK 02</span>
+            <h3>合格ラインを行動と言葉で定義する</h3>
+            <p>AIに作らせる前に、良い出力の条件を文章にします。ここが曖昧だとレビューも曖昧になります。</p>
+            <ul>
+              <li>必ず入れる論点</li>
+              <li>絶対に外す表現</li>
+              <li>ターゲットが納得する順番</li>
+              <li>読み終えた後の状態変化</li>
+            </ul>
+          </article>
+          <article class="mk-work-card">
+            <span class="mk-work-label">WORK 03</span>
+            <h3>顧客の本音を集める</h3>
+            <p>アンケート、相談、チャット、DM、面談メモから、AIに渡す一次情報を集めます。</p>
+            <ul>
+              <li>悩みを本人の言葉のまま抜き出す</li>
+              <li>購入前の迷いと購入後の変化を分ける</li>
+              <li>抽象語ではなく、実際に出た表現を残す</li>
+            </ul>
+          </article>
+          <article class="mk-work-card">
+            <span class="mk-work-label">WORK 04</span>
+            <h3>話者のパーソナル情報を整理する</h3>
+            <p>自分や講師の背景がないと、AIの文章は整っていても本人らしさが薄くなります。</p>
+            <ul>
+              <li>経歴、失敗談、得意領域</li>
+              <li>大事にしている価値観</li>
+              <li>よく使う例え、冗談、弱みの見せ方</li>
+              <li>受講生との距離感</li>
+            </ul>
+          </article>
+          <article class="mk-work-card">
+            <span class="mk-work-label">WORK 05</span>
+            <h3>スタイルシートを作る</h3>
+            <p>言い回しだけでなく、言わないこと・強く言うこと・避けるトーンまで定義します。</p>
+            <ul>
+              <li>使う言葉</li>
+              <li>使わない言葉</li>
+              <li>煽りすぎないライン</li>
+              <li>同じ目線か、先生ポジションか、伴走ポジションか</li>
+            </ul>
+          </article>
+          <article class="mk-work-card">
+            <span class="mk-work-label">WORK 06</span>
+            <h3>AIに評価者もやらせる</h3>
+            <p>作成後は、合格ラインに対してAIに評価させます。作るAIと見るAIを分けると、抜け漏れに気づきやすくなります。</p>
+            <ul>
+              <li>要素の不足を列挙させる</li>
+              <li>ターゲット視点の違和感を出させる</li>
+              <li>修正案ではなく、まず問題点を出させる</li>
+            </ul>
+          </article>
+          <article class="mk-work-card">
+            <span class="mk-work-label">WORK 07</span>
+            <h3>具体例を原理に戻す</h3>
+            <p>うまくいったコピーやLPをそのまま保存するだけでは、次回に転用しにくくなります。</p>
+            <ul>
+              <li>なぜ効いたのかを抽象化する</li>
+              <li>別ジャンルでも使える判断基準にする</li>
+              <li>例文と原理をセットで保存する</li>
+            </ul>
+          </article>
+          <article class="mk-work-card">
+            <span class="mk-work-label">WORK 08</span>
+            <h3>次回のローンチに残す</h3>
+            <p>一度作ったものを、次回のプロンプト、スタイル、チェックリスト、素材集として残すところまでがAIインフラです。</p>
+            <ul>
+              <li>素材フォルダを固定する</li>
+              <li>合格ラインのテンプレートを残す</li>
+              <li>良い出力とNG出力を比較できる形で保存する</li>
+            </ul>
+          </article>
+        </div>
+        <div class="mk-review-strip" aria-label="復習時の確認項目">
+          <div class="mk-review-chip">目的は明文化したか</div>
+          <div class="mk-review-chip">一次情報は入れたか</div>
+          <div class="mk-review-chip">NG表現は決めたか</div>
+          <div class="mk-review-chip">AIに評価させたか</div>
+          <div class="mk-review-chip">次回用に保存したか</div>
+        </div>
+      </div>
+    </section>
+    <section class="mk-section" id="qa">
+      <div class="mk-shell">
+        <div class="mk-section-head">
+          <p class="mk-kicker">Q&A</p>
+          <h2>質疑応答で見えた、実務への落とし込み</h2>
+          <p>チャットで寄せられた質問と、録画内での回答要旨をまとめています。内部メモではなく、アーカイブ視聴者が見ても内容が追える形に整えました。</p>
+        </div>
+        <div class="mk-qa-grid">
+          <article class="mk-qa-card">
+            <div class="mk-qa-index">
+              <span>Q1</span>
+            </div>
+            <div class="mk-qa-body">
+              <p class="mk-qa-focus">信頼と訴求</p>
+              <h3>女性話者が信頼感を壊さず、訴求力も落とさないには？</h3>
+              <p>単にベネフィットを強く並べるのではなく、相手の状態変化、価値観、話者の立ち位置を合わせることが重要。市場・性別・話者の距離感によって、煽りの強さやCTAの圧は調整する必要があります。</p>
+            </div>
+          </article>
+          <article class="mk-qa-card">
+            <div class="mk-qa-index">
+              <span>Q2</span>
+            </div>
+            <div class="mk-qa-body">
+              <p class="mk-qa-focus">時間管理</p>
+              <h3>時間の棚卸しは具体的にどう管理する？</h3>
+              <p>GoogleカレンダーとAIを組み合わせ、予定を自分の価値観・目的・優先順位に照らして見直す。会議や義務が多すぎて、人の時間で生きていないかを可視化するのがポイントです。</p>
+            </div>
+          </article>
+          <article class="mk-qa-card">
+            <div class="mk-qa-index">
+              <span>Q3</span>
+            </div>
+            <div class="mk-qa-body">
+              <p class="mk-qa-focus">コンセプト</p>
+              <h3>AIでコンセプトや訴求を決める具体ステップは？</h3>
+              <p>優秀な人が出すコンセプトをAIだけで100%再現するのはまだ難しい。ただし、良いコンセプトの原理、成功例、期待値と価値提供の関係を入れて壁打ちすれば、70〜80点の候補は作れるという見立てでした。</p>
+            </div>
+          </article>
+          <article class="mk-qa-card">
+            <div class="mk-qa-index">
+              <span>Q4</span>
+            </div>
+            <div class="mk-qa-body">
+              <p class="mk-qa-focus">コピー品質</p>
+              <h3>コピーのキレやフックの強さを再現するには？</h3>
+              <p>自分らしい文章は口調だけでなく、スタンス、関係性、どこまで言うかで決まる。短い例文をAIに出させ、自分っぽい・違うを判定し、その理由をナレッジ化する練習が有効です。</p>
+            </div>
+          </article>
+          <article class="mk-qa-card">
+            <div class="mk-qa-index">
+              <span>Q5</span>
+            </div>
+            <div class="mk-qa-body">
+              <p class="mk-qa-focus">ユーザー理解</p>
+              <h3>ユーザー深度の分類はどう考える？</h3>
+              <p>AIDMAのような購買プロセスをさらに細かく分ける考え方。正確な名前よりも、ユーザーがいま何を知り、何を試し、何で判断している状態かを定義することが大切です。</p>
+            </div>
+          </article>
+          <article class="mk-qa-card">
+            <div class="mk-qa-index">
+              <span>Q6</span>
+            </div>
+            <div class="mk-qa-body">
+              <p class="mk-qa-focus">LP設計</p>
+              <h3>過去の勝ちLPがない場合、合格ラインはどう定義する？</h3>
+              <p>まず今回のLPで獲得したい人を定義し、その人を動かすために必要な要素を洗い出す。似たLPをコピーするのではなく、なぜ機能しているかをAIに分解させ、構造を借りるのが近道です。</p>
+            </div>
+          </article>
+          <article class="mk-qa-card">
+            <div class="mk-qa-index">
+              <span>Q7</span>
+            </div>
+            <div class="mk-qa-body">
+              <p class="mk-qa-focus">上流構築</p>
+              <h3>顧客インタビューや市場感情から原液を作る前工程は有効？</h3>
+              <p>本人の強み、市場の一般感情、バックボーン由来の成功パターンを構造化してからコンセプトへつなげる流れは、かなり筋が良いという回答でした。</p>
+            </div>
+          </article>
+          <article class="mk-qa-card">
+            <div class="mk-qa-index">
+              <span>Q8</span>
+            </div>
+            <div class="mk-qa-body">
+              <p class="mk-qa-focus">ナレッジ化</p>
+              <h3>具体例を抽象化して再利用ナレッジにするには？</h3>
+              <p>AIは放っておくと具体例のまま出しがちです。別案件でも使える原理にするよう明示し、事例の表面ではなく、本質と判断基準を抽象化させることが重要です。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="mk-section">
+      <div class="mk-shell">
+        <div class="mk-section-head">
+          <p class="mk-kicker">Audience Voice</p>
+          <h2>チャットに出ていた反応</h2>
+          <p>参加者名は出さず、チャット上の反応を公開ページ向けに要約しています。</p>
+        </div>
+        <div class="mk-voice-grid">
+          <article class="mk-voice">
+            <p>時間の可視化をすぐやってみたい、という反応がありました。</p>
+            <span>時間棚卸し</span>
+          </article>
+          <article class="mk-voice">
+            <p>今日のアーカイブを何度も見返したい、という声が出ていました。</p>
+            <span>復習意欲</span>
+          </article>
+          <article class="mk-voice">
+            <p>AIに渡す前提情報の重要性に対して、メモを取りながら聞いていた参加者が多くいました。</p>
+            <span>実装視点</span>
+          </article>
+          <article class="mk-voice">
+            <p>コンセプトや訴求は難しいが、壁打ちの具体例が参考になったという反応がありました。</p>
+            <span>上流設計</span>
+          </article>
+          <article class="mk-voice">
+            <p>ユーザー深度やAIDMAの話から、自分の分類を見直したいという流れがありました。</p>
+            <span>顧客理解</span>
+          </article>
+          <article class="mk-voice">
+            <p>月400時間稼働や仕事観の話など、ケンさん本人の価値観にも大きな反応がありました。</p>
+            <span>人物理解</span>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="mk-section mk-section-tight">
+      <div class="mk-shell">
+        <div class="mk-cta">
+          <h2>学びは、Xでアウトプットして定着させる</h2>
+          <p>セミナー内でも案内があった通り、感想・学び・実装することを引用ポストで残すと、復習の起点になります。ケンさんをメンションして、講座内の学びを外に出していきましょう。</p>
+          <div class="mk-cta-actions">
+            <a class="mk-button mk-button-primary" href="https://x.com/starriver0513/status/2057787311811870998" target="_blank" rel="noopener">引用ポスト元を開く</a>
+            <a class="mk-button mk-button-ghost" href="https://x.com/intent/tweet?text=%40kenminami1%20%E5%8D%97%E5%B9%85%E3%82%B1%E3%83%B3%E3%81%95%E3%82%93%E3%81%AEAI%E8%AC%9B%E5%B8%AB%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC%E3%81%8B%E3%82%89%E3%80%81AI%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9%E3%81%AE%E8%80%83%E3%81%88%E6%96%B9%E3%82%92%E5%AD%A6%E3%81%B3%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82" target="_blank" rel="noopener">@kenminami1 を入れて投稿</a>
+          </div>
+        </div>
+        <p class="mk-source-note">制作元: Zoom録画の文字起こし、Zoomチャット、録画内スライドの目視確認。スライド資料・Canvaデータ・配布用PDFはこのHTMLに含めていません。</p>
+      </div>
+    </section>
+  </main>
+  <footer class="mk-footer">
+    <div class="mk-shell">
+      <p>AIマーケティング構築講座 特別講師セミナー アーカイブページ / 2026-05-23制作</p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
