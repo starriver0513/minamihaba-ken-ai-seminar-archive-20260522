@@ -272,6 +272,41 @@
     height: 100%;
     border: 0;
   }
+  .mk-video-part-list {
+    display: grid;
+    gap: 14px;
+    padding: 16px;
+    background: linear-gradient(180deg, #111827 0%, #1f1f3d 100%);
+  }
+  .mk-video-part {
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.06);
+  }
+  .mk-video-part-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    color: #ffffff;
+    font-size: 13px;
+  }
+  .mk-video-part-head strong {
+    font-weight: 900;
+  }
+  .mk-video-part-head span {
+    color: rgba(255, 255, 255, 0.72);
+    font-weight: 700;
+  }
+  .mk-video-part video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #050816;
+  }
   .mk-video-frame-pending {
     display: grid;
     place-items: center;
@@ -1182,12 +1217,53 @@
         </div>
         <div class="mk-video-grid">
           <article class="mk-video-card">
-            <div class="mk-video-frame">
-              <iframe src="https://drive.google.com/file/d/1-8Ntu6lvjeT9dBfbA1cjkthzfsO3HcZs/preview" allow="autoplay; fullscreen" allowfullscreen title="南幅ケンさん AI講師セミナー アーカイブ動画"></iframe>
+            <div class="mk-video-part-list">
+            <section class="mk-video-part">
+              <div class="mk-video-part-head">
+                <strong>Part 1</strong>
+                <span>0:00:00 - 0:30:02</span>
+              </div>
+              <video controls preload="metadata" playsinline controlsList="nodownload noplaybackrate" src="https://starriver0513.github.io/minamihaba-ken-ai-seminar-archive-20260522/assets/video/ken-ai-seminar-part01.mp4" title="南幅ケンさん AI講師セミナー Part 1"></video>
+            </section>
+            <section class="mk-video-part">
+              <div class="mk-video-part-head">
+                <strong>Part 2</strong>
+                <span>0:30:02 - 1:00:04</span>
+              </div>
+              <video controls preload="metadata" playsinline controlsList="nodownload noplaybackrate" src="https://starriver0513.github.io/minamihaba-ken-ai-seminar-archive-20260522/assets/video/ken-ai-seminar-part02.mp4" title="南幅ケンさん AI講師セミナー Part 2"></video>
+            </section>
+            <section class="mk-video-part">
+              <div class="mk-video-part-head">
+                <strong>Part 3</strong>
+                <span>1:00:04 - 1:30:20</span>
+              </div>
+              <video controls preload="metadata" playsinline controlsList="nodownload noplaybackrate" src="https://starriver0513.github.io/minamihaba-ken-ai-seminar-archive-20260522/assets/video/ken-ai-seminar-part03.mp4" title="南幅ケンさん AI講師セミナー Part 3"></video>
+            </section>
+            <section class="mk-video-part">
+              <div class="mk-video-part-head">
+                <strong>Part 4</strong>
+                <span>1:30:20 - 2:00:06</span>
+              </div>
+              <video controls preload="metadata" playsinline controlsList="nodownload noplaybackrate" src="https://starriver0513.github.io/minamihaba-ken-ai-seminar-archive-20260522/assets/video/ken-ai-seminar-part04.mp4" title="南幅ケンさん AI講師セミナー Part 4"></video>
+            </section>
+            <section class="mk-video-part">
+              <div class="mk-video-part-head">
+                <strong>Part 5</strong>
+                <span>2:00:06 - 2:30:18</span>
+              </div>
+              <video controls preload="metadata" playsinline controlsList="nodownload noplaybackrate" src="https://starriver0513.github.io/minamihaba-ken-ai-seminar-archive-20260522/assets/video/ken-ai-seminar-part05.mp4" title="南幅ケンさん AI講師セミナー Part 5"></video>
+            </section>
+            <section class="mk-video-part">
+              <div class="mk-video-part-head">
+                <strong>Part 6</strong>
+                <span>2:30:18 - 2:32:24</span>
+              </div>
+              <video controls preload="metadata" playsinline controlsList="nodownload noplaybackrate" src="https://starriver0513.github.io/minamihaba-ken-ai-seminar-archive-20260522/assets/video/ken-ai-seminar-part06.mp4" title="南幅ケンさん AI講師セミナー Part 6"></video>
+            </section>
             </div>
             <div class="mk-video-actions">
-              <span class="mk-status mk-status-ok">Google Drive preview embedded</span>
-              <span>ページ内でプレビュー再生できます。資料ファイルの配布はありません。</span>
+              <span class="mk-status mk-status-ok">HTML5 video embedded</span>
+              <span>Driveの再生処理待ちを避けるため、ページ内再生用に分割MP4を埋め込んでいます。資料ファイルの配布はありません。</span>
             </div>
           </article>
           <aside class="mk-watch-card">
